@@ -62,7 +62,7 @@ for part in sequence_parts:
                         keyboard.press('shift')
 
                     keyboard.press(base_key)
-                    time.sleep(0.2)
+                    time.sleep(0.1)
                     keyboard.release(base_key)
 
                     if need_shift:
@@ -73,9 +73,9 @@ for part in sequence_parts:
 
                     if original_k.isupper():
                         keyboard.press('shift')
-                    keyboard.press(key_to_press)
-                    time.sleep(0.1)
                     try:
+                        keyboard.press(key_to_press)
+                        time.sleep(0.1)
                         keyboard.release(key_to_press)
                     except Exception:
                         print(f"")
